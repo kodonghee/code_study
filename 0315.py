@@ -7,7 +7,8 @@ def is_palindrome(word):
     return True
     
 
-## 배열 내에서 특정 값 찾기
+## 배열 내에서 특정 값 찾기 (선형 탐색)
+
 def linear_search(element, some_list):
     for i in range(len(some_list)):
         if some_list[i] == element:
