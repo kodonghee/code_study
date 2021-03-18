@@ -22,3 +22,25 @@ def factorial(n):
     return factorial(n-1) * n
 ```
 
+> 하노이의 탑
+
+```python
+def move_disk(disk_num, start_peg, end_peg):
+    print("%d번 원판을 %d번 기둥에서 %d번 기둥으로 이동" % (disk_num, start_peg, end_peg))
+
+def hanoi(num_disks, start_peg, end_peg):
+    peg = [1, 2, 3]
+    peg.remove(start_peg)
+    peg.remove(end_peg)
+    rem = peg[0]
+    
+    if num_disks == 1:
+        move_disk(num_disks, start_peg, end_peg)
+    else:
+        hanoi(num_disks -1, start_peg, rem)
+        move_disk(num_disks, start_peg, end_peg)
+        hanoi(num_disks -1, rem, end_peg)
+        
+# num_disks = 원판 수, start_peg = 게임을 시작하는 기둥 번호, end_peg = 목표로 하는 기둥 번호 
+```
+
