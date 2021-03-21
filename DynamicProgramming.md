@@ -26,3 +26,17 @@ def fib(n):
     return fib_memo(n, fib_cache)
 ```
 
+### 2. Tabulation
+
+* 처음부터 모두 계산 (상향식 접근)
+
+```python
+def fib_tab(n):
+    tab = []
+    for i in range(n):
+        if i == 0 or i == 1:
+            tab.append(1)
+        else:
+            tab.append(tab[i-2] + tab[i-1])
+    return tab[n-1]
+```
