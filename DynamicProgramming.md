@@ -74,3 +74,28 @@ def fib_tab(n):
             tab.append(tab[i-2] + tab[i-1])
     return tab[n-1]
 ```
+
+> 새콤달콤 장사
+
+* 가능한 최대 수익을 리턴시켜 주는 함수 `max_profit`
+
+```python
+def max_profit(price_list, count):
+    max_list = []
+    # 판매할 새꼼달꼼 개수마다의 최대 수익을 max_list에 저장
+    for i in range(count + 1):
+        if i == 0 or i == 1:
+            max_list.append(price_list[i])
+        else:
+            if len(price_list) > i:
+                max_p = price_list[i]
+            else:
+                max_p = 0
+            for j in range(1, i):
+                p = max_list[j] + max_list[i - j]
+                if p > max_p:
+                    max_p = p
+            max_list.append(max_p)
+            
+    return max_list[count]
+```
