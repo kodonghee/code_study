@@ -2,6 +2,7 @@
 
 * `max_profit`
   * 일별 주식 가격이 들어 있는 stock_list를 받고 최대 수익을 리턴하는 함수 
+  * 주식은 한 번만 사고 한 번만 팔수 있고 사는 당일에 팔 수는 없음
 
 ```python
 def max_profit(stock_list):
@@ -11,3 +12,4 @@ def max_profit(stock_list):
             max1 = max(stock_list [i+1:]) - stock_list[i]
     return max1
 ```
+
