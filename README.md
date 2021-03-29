@@ -1,12 +1,15 @@
 ## Code Study
 
+
+
 #### 1.  Algorithm
 
 * Brute Force Attack
-
 * Divide and Conquer
 * Dynamic Programming
 * Greedy Algorithm
+
+
 
 
 
@@ -14,6 +17,8 @@
 
 * Array
 * Linked List
+
+
 
 
 
