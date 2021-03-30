@@ -106,3 +106,99 @@ def solution(skill, skill_trees):
 
     return count
 ```
+
+
+
+
+
+#### 5. 기능개발
+
+* 스택 / 큐
+
+```python
+# 기능을 개발하는 데 걸리는 일 수 계산
+def day(prog, speed):
+    rem = 100 - prog
+    if rem % speed == 0:
+        return rem // speed
+    else:
+        return rem // speed + 1
+    
+    
+def solution(progresses, speeds):
+    
+    num_list = []
+    count = 1
+    max_day = day(progresses[0], speeds[0])
+    
+    for i in range(1, len(progresses)):
+        
+        if day(progresses[i], speeds[i]) <= max_day:
+            count += 1
+        # 마지막 기능이 아닌 경우 max_day보다 더 많은 시간이 걸리는 기능이 등장했을 때만
+        # num_list에 count 추가 & max_day 변경
+        else:
+            num_list.append(count)
+            max_day = day(progresses[i], speeds[i])
+            count = 1
+           
+        # 마지막 기능이라면 num_list에 count를 반드시 추가
+        if i == len(progresses)-1:
+            num_list.append(count)
+    
+    
+    return num_list
+```
+
+
+
+
+
+#### 6. 124 나라의 숫자
+
+* 더 간결한 코드를 작성하는 법이 많은 문제
+
+```python
+import math
+
+
+def solution(n):
+    order = 0
+    a = 1
+
+    while True:
+
+        order += math.pow(3, a)
+
+        if order >= n:
+            break
+
+        a += 1
+    fix = a
+    number = ""
+
+
+    while True:
+		# 이 부분을 먼저 변수에 저장해 놓고 코드를 작성하지 않으면 런타임 오류
+        start1 = order - pow(3, a)
+        start2 = order - pow(3, a) + pow(3, a)//3
+        start3 = order - pow(3, a) + 2 * pow(3, a)//3
+
+        if n > start1 and n <= start2:
+            number += "1"
+            order = start2
+
+        elif n > start2 and n <= start3:
+            number += "2"
+            order = start3
+        else:
+            number += "4"
+
+        a -= 1
+
+        if len(number) == fix:
+            break
+
+    return number
+```
+
