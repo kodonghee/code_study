@@ -134,3 +134,46 @@
       }
   }
   ```
+  
+  * 불필요한 과정 삭제 (최단시간 풀이)
+  
+  ```java
+  class Solution {
+      public String solution(String p) {
+          if (p == ""){
+              return p;
+          }
+  
+          int a = 0;
+          int b = 0;
+          for (int i = 0;i < p.length();i++) {
+              if (p.charAt(i) == '(') {
+                  a ++;
+              } else {
+                  b ++;
+              }
+              if (b == a){
+                  String str1 = "";
+                  String str2 = "";
+                  str1 = p.substring(0, i+1);
+                  str2 = p.substring(i+1, p.length());
+                  if (p.charAt(0) == '('){
+                      return str1 + solution(str2);
+                  } else{
+                  String str_mid = str1.substring(1, str1.length() - 1);
+                  String str_rev = "";
+                  for (int j = 0; j < str_mid.length(); j++) {
+                      if (str_mid.charAt(j) == '(') {
+                          str_rev += ')';
+                      } else {
+                          str_rev += '(';
+                      }
+                  }
+                  return "(" + solution(str2) + ")" + str_rev; 
+                  }
+              }
+          }
+          return p;
+      }
+  }
+  ```
