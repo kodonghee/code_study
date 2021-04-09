@@ -12,12 +12,14 @@
       point = "ICN"
       plus = []
       
-      for i in range(len(tickets)):
-          nex = "ZZZ"
+      while len(tickets) > 0:
+          nex = "aaa"
           cnt = 0
+          cnt2 = 0
           for city in tickets:
               if city[0] == point and city[1] < nex:
-                  if  i < len(tickets) - 1:
+                  cnt2 += 1
+                  if len(tickets) > 1:
                       x = city[1]
                       for other in tickets:
                           if other[0] == city[1]:
@@ -26,24 +28,23 @@
                   else:
                       nex = city[1]
                       cnt += 1
-                      
-          if cnt == 0:
+          
+          if cnt2 == 0:
+              nex = 0
+          elif cnt == 0:
               nex = x
               
-          for i in range(len(tickets)):
-              if tickets[i] == [point, nex]:
-                  tickets[i][0] = 0
-                  break
+          if [point, nex] in tickets:
+              tickets.remove([point, nex])
                   
-          if cnt == 0:
+          if cnt2 == 0:
+              plus.append(answer.pop())
+              point = answer[-1]
+          elif cnt == 0:
               plus.append(nex)
               plus.append(point)
-              a = answer.pop()
+              answer.pop()
               point = answer[-1]
-              for i in range(len(tickets)):
-                  if tickets[i] == [point, a]:
-                      tickets[i][0] = 0
-                      break
           else:
               point = nex
               answer.append(nex)
@@ -55,5 +56,3 @@
               answer.append(plus.pop())
           return answer
   ```
-
-  
