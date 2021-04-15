@@ -19,6 +19,8 @@
 * Linked List
   * Singly Linked List
   * Doubly Linked List
+* Hash Table
+  * Chaining - 같은 인덱스에 여러 개의 key-value 쌍 저장
 
 
 
