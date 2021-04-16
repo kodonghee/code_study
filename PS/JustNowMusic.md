@@ -18,6 +18,10 @@
           arr = music.split(',')
           start = arr[0].split(':')
           end = arr[1].split(':')
+          
+          if start[0] != "00" and end[0] == "00":
+              end[0] = "24"
+          
           if start[1] <= end[1]:
               t = 60 * (int(end[0]) - int(start[0])) + int(end[1]) - int(start[1])
           else:
@@ -74,5 +78,3 @@
               if melody[0] == max_t:
                   return melody[1]
   ```
-
-  
