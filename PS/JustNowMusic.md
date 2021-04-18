@@ -25,7 +25,7 @@
           if start[1] <= end[1]:
               t = 60 * (int(end[0]) - int(start[0])) + int(end[1]) - int(start[1])
           else:
-              t = 60 * (int(end[0]) - int(start[0]) - 1) + int(end[1]) + int(start[1])
+              t = 60 * (int(end[0]) - int(start[0]) - 1) + 60 + int(end[1]) - int(start[1])
           
           cnt = 0
           for n in arr[3]:
@@ -54,15 +54,13 @@
                   elif melody[melody.find(m) + len(m)] != "#":
                       melodies.append([t, arr[2]])
               else:
-                  if melody.find(m) + len(m) == len(melody): 
-                      melodies.append([t, arr[2]])
-                  else:
-                      while m in melody:
-                          if melody[melody.find(m) + len(m)] != "#":
-                              melodies.append([t, arr[2]])
-                              break
-                          else:
-                              melody = melody[melody.find(m) + len(m) + 1:]
+                  while m in melody:
+                      a = melody.find(m) + len(m)
+                      if a == len(melody) or melody[a] != "#":
+                          melodies.append([t, arr[2]])
+                          break
+                      else:
+                          melody = melody[a + 1:]
                   
       
       if len(melodies) == 0:
