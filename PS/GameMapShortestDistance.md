@@ -8,47 +8,35 @@
   * 단, 상대 팀 진영에 도착할 수 없을 때는 -1을 return
 
   ```python
+  from collections import deque
+  
   def solution(maps):
-      answer = 1
-      loc = (0, 0)
+      
+      path = [[1,0], [-1, 0], [0,1], [0,-1]]
+      
       h = len(maps)
       w = len(maps[0])
+      
+      check = [[-1 for _ in range(w)] for _ in range(h)]
+      
+      q = deque()
+      q.append([0,0])
+      
+      check[0][0] = 1
   
-      while True:
-          a = loc[0]
-          b = loc[1]
+      while q:
+          b, a = q.popleft()
   
-          if b == w - 1:
-              if a + 1 < h and maps[a + 1][b] == 1:
-                  loc = (a + 1, b)
-                  answer += 1
-              else:
-                  return -1
-          elif a == h - 1:
-              if b + 1 < w and maps[a][b + 1] == 1:
-                  loc = (a, b + 1)
-                  answer += 1
-              else:
-                  return -1
-          else:
+          for i in range(4):
+              next_b = b + path[i][0]
+              next_a = a + path[i][1]
   
-              if b + 1 < w and maps[a][b + 1] == 1:
-                  loc = (a, b + 1)
-                  answer += 1
-              elif a + 1 < h and maps[a + 1][b] == 1:
-                  loc = (a + 1, b)
-                  answer += 1
-              elif a - 1 >= 0 and maps[a - 1][b] == 1:
-                  loc = (a - 1, b)
-                  answer += 1
-              elif b - 1 >= 0 and maps[a][b - 1] == 1:
-                  loc = (a, b - 1)
-                  answer += 1
-              else:
-                  return -1
+              if -1 < next_b < h and -1 < next_a < w:
+                  if maps[next_b][next_a] == 1:
+                      if check[next_b][next_a] == -1:
+                          check[next_b][next_a] = check[b][a] + 1
+                          q.append([next_b, next_a])
   
-          if loc == (h - 1, w - 1):
-              break
-              
+      answer = check[-1][-1]
       return answer
   ```
