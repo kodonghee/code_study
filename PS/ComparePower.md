@@ -2,7 +2,7 @@
 
 * `solution`
 
-  * K 개의 그룹으로 나눠서 전투력 비교
+  * K 개의 그룹으로 나눠서 전투력 비교
 
   ```python
   def solution(N, K, arr):
