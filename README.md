@@ -52,3 +52,6 @@
 * 메뉴 리뉴얼
 * 게임 맵 최단거리
 * JadenCase 문자열 만들기
+* [4 형제 아침 안부 묻기](https://github.com/kodonghee/code_study/blob/main/PS/GoodMorning.md)
+* [세금 납부 정보 수집](https://github.com/kodonghee/code_study/blob/main/PS/TaxInfo.md)
+* [K 개의 그룹으로 나눠서 전투력 비교](https://github.com/kodonghee/code_study/blob/main/PS/ComparePower.md)
