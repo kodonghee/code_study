@@ -55,4 +55,6 @@
 * [4 형제 아침 안부 묻기](https://github.com/kodonghee/code_study/blob/main/PS/GoodMorning.md)
 * [세금 납부 정보 수집](https://github.com/kodonghee/code_study/blob/main/PS/TaxInfo.md)
 * [K 개의 그룹으로 나눠서 전투력 비교](https://github.com/kodonghee/code_study/blob/main/PS/ComparePower.md)
-* [점수 차이 구하기](https://github.com/kodonghee/code_study/blob/main/PS/%EC%A0%90%EC%88%98%20%EC%B0%A8%EC%9D%B4%20%EA%B5%AC%ED%95%98%EA%B8%B0.md)
+* [점수 차이 구하기 (24/3/10)](https://github.com/kodonghee/code_study/blob/main/PS/%EC%A0%90%EC%88%98%20%EC%B0%A8%EC%9D%B4%20%EA%B5%AC%ED%95%98%EA%B8%B0.md)
+* [기사 재배치로 최대 점수 얻기 (24/3/10)](https://github.com/kodonghee/code_study/blob/main/PS/%EA%B8%B0%EC%82%AC%20%EC%9E%AC%EB%B0%B0%EC%B9%98%EB%A1%9C%20%EC%B5%9C%EB%8C%80%20%EC%A0%90%EC%88%98%20%EC%96%BB%EA%B8%B0.md)
+* [내려오는 벽 피하기 (24/3/10)](https://github.com/kodonghee/code_study/blob/main/PS/%EB%82%B4%EB%A0%A4%EC%98%A4%EB%8A%94%20%EB%B2%BD%20%ED%94%BC%ED%95%98%EA%B8%B0.md)
