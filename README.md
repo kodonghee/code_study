@@ -55,3 +55,4 @@
 * [4 형제 아침 안부 묻기](https://github.com/kodonghee/code_study/blob/main/PS/GoodMorning.md)
 * [세금 납부 정보 수집](https://github.com/kodonghee/code_study/blob/main/PS/TaxInfo.md)
 * [K 개의 그룹으로 나눠서 전투력 비교](https://github.com/kodonghee/code_study/blob/main/PS/ComparePower.md)
+* [점수 차이 구하기](https://github.com/kodonghee/code_study/blob/main/PS/%EC%A0%90%EC%88%98%20%EC%B0%A8%EC%9D%B4%20%EA%B5%AC%ED%95%98%EA%B8%B0.md)
