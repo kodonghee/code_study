@@ -59,3 +59,4 @@
 * [기사 재배치로 최대 점수 얻기 (24/3/10)](https://github.com/kodonghee/code_study/blob/main/PS/%EA%B8%B0%EC%82%AC%20%EC%9E%AC%EB%B0%B0%EC%B9%98%EB%A1%9C%20%EC%B5%9C%EB%8C%80%20%EC%A0%90%EC%88%98%20%EC%96%BB%EA%B8%B0.md)
 * [내려오는 벽 피하기 (24/3/10)](https://github.com/kodonghee/code_study/blob/main/PS/%EB%82%B4%EB%A0%A4%EC%98%A4%EB%8A%94%20%EB%B2%BD%20%ED%94%BC%ED%95%98%EA%B8%B0.md)
 * [주어진 범위 내의 소수 개수 구하기 (24/3/17)](https://github.com/kodonghee/code_study/blob/main/PS/%EC%A3%BC%EC%96%B4%EC%A7%84%20%EB%B2%94%EC%9C%84%20%EC%95%88%EC%9D%98%20%EC%86%8C%EC%88%98%20%EA%B0%9C%EC%88%98%20%EA%B5%AC%ED%95%98%EA%B8%B0.md)
+* [전화번호 목록](https://github.com/kodonghee/code_study/tree/main/PS)
